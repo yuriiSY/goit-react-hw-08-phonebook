@@ -20,9 +20,11 @@ const ContactList = () => {
     dispatch(deleteContacts(id));
   };
 
-  const elements = items.map(({ id, name, phone }) => (
-    <li key={id}>
-      {name}:{phone}
+  const elements = items.map(({ id, name, number }) => (
+    <li key={id} className={css.list__item}>
+      <p>
+        {name}:{number}
+      </p>
       <button
         className={css.button}
         onClick={() => onDeleteContact(id)}

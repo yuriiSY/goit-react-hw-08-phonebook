@@ -2,14 +2,17 @@ import ContactList from 'components/ContactList/ContactList';
 import ContactForm from 'components/ContactForm/ContactForm';
 import Filter from 'components/Filter/Filter';
 
+import style from './contacts.module.css';
 const Contacts = () => {
   return (
-    <div>
-      <h1>Phonebook</h1>
-      <ContactForm />
-      <h2>Contacts</h2>
-      <Filter />
-      <ContactList />
+    <div className={style.contact__book}>
+      <div className={style.contacts__form}>
+        <ContactForm />
+      </div>
+      <div className={style.contacts__list}>
+        <Filter />
+        <ContactList />
+      </div>
     </div>
   );
 };

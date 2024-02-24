@@ -1,7 +1,39 @@
 .list {
-  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  list-style-type: none;
+  gap: 20px;
+  padding: 0;
 }
 
 .button {
-  margin-left: 20px;
+  background-color: rgb(237, 12, 12);
+  border-radius: 2px;
+  border: 0;
+  box-sizing: border-box;
+  color: #eee;
+  cursor: pointer;
+  font-size: 18px;
+
+  padding: 5px;
+  text-align: center;
+}
+
+.submit:active {
+  background-color: #06b;
+}
+
+.list__item {
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #15172b;
+  width: 100%;
+  max-width: 300px;
+  padding: 10px;
+  color: white;
+  border-radius: 10px;
 }

@@ -1,0 +1,15 @@
+.registration {
+  margin: 0 auto;
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  height: 500px;
+  padding: 20px;
+  width: 320px;
+}
+
+.text {
+  color: red;
+  font-weight: bold;
+  text-align: center;
+}

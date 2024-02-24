@@ -1,0 +1,13 @@
+.contact__book {
+  display: flex;
+  gap: 100px;
+  justify-content: center;
+  align-items: center;
+}
+.contacts__form {
+  background-color: #15172b;
+  border-radius: 20px;
+  box-sizing: border-box;
+  padding: 20px;
+  width: 320px;
+}

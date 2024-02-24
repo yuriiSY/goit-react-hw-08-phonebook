@@ -13,33 +13,6 @@ export const fetchContacts = createAsyncThunk(
   }
 );
 
-// export const fetchContacts = () => {
-//   const func = async dispatch => {
-//     try {
-//       dispatch(fetchContactsLoading());
-//       const data = await contactsApi.requestContacts();
-//       dispatch(fetchContactsSuccess(data));
-//     } catch (error) {
-//       dispatch(fetchContactsError(error.message));
-//     }
-//   };
-
-//   return func;
-// };
-
-// export const addContacts = body => {
-//   const func = async dispatch => {
-//     try {
-//       dispatch(addContactsLoading());
-//       const data = await contactsApi.requestAddContacts(body);
-//       dispatch(addContactsSuccess(data));
-//     } catch (error) {
-//       dispatch(addContactsError(error.message));
-//     }
-//   };
-//   return func;
-// };
-
 export const addContacts = createAsyncThunk(
   'contacts/add',
   async (body, { rejectWithValue }) => {
@@ -53,7 +26,6 @@ export const addContacts = createAsyncThunk(
   {
     condition: ({ name }, { getState }) => {
       const { contacts } = getState();
-      console.log(contacts);
       const nameNormalized = name.toLowerCase();
 
       const duplicate = contacts.items.find(item => {
@@ -68,19 +40,6 @@ export const addContacts = createAsyncThunk(
     },
   }
 );
-
-// export const deleteContacts = id => {
-//   const func = async dispatch => {
-//     try {
-//       dispatch(deleteContactsLoading());
-//       await contactsApi.requestDeleteContacts(id);
-//       dispatch(deleteContactsSuccess(id));
-//     } catch (error) {
-//       dispatch(deleteContactsError(error.message));
-//     }
-//   };
-//   return func;
-// };
 
 export const deleteContacts = createAsyncThunk(
   'contacts/delete',

@@ -7,7 +7,7 @@ import css from './contactForm.module.css';
 
 const INITIAL_STATE = {
   name: '',
-  phone: '',
+  number: '',
 };
 
 const ContactForm = () => {
@@ -41,15 +41,14 @@ const ContactForm = () => {
     setContact({ ...INITIAL_STATE });
   };
 
-  const { name, phone } = constact;
+  const { name, number } = constact;
 
   const nameId = nanoid();
   const phoneId = nanoid();
 
   return (
     <form className={css.form} onSubmit={onAddContact}>
-      <div className={css.formGroup}>
-        <label htmlFor={nameId}>Name</label>
+      <div className={css.block}>
         <input
           ref={inputRef}
           onChange={handleChange}
@@ -57,21 +56,32 @@ const ContactForm = () => {
           type="text"
           name="name"
           value={name}
+          className={css.input}
           required
         />
+        <div className={css.cut}></div>
+        <label className={css.placeholder} htmlFor={nameId}>
+          Name
+        </label>
       </div>
-      <div className={css.formGroup}>
-        <label htmlFor={phoneId}>Phone</label>
+      <div className={css.block}>
         <input
           onChange={handleChange}
           id={phoneId}
           type="text"
-          name="phone"
-          value={phone}
+          name="number"
+          value={number}
+          className={css.input}
           required
         />
+        <div className={css.cut}></div>
+        <label className={css.placeholder} htmlFor={phoneId}>
+          Phone
+        </label>
       </div>
-      <button type="submit">Add Contact</button>
+      <button className={css.submit} type="submit">
+        Add Contact
+      </button>
     </form>
   );
 };
