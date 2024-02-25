@@ -46,6 +46,7 @@ const LoginForm = ({ onSubmit }) => {
           type="email"
           name="email"
           className={style.input}
+          placeholder=" "
           required
         />
         <div className={style.cut}></div>
@@ -61,6 +62,7 @@ const LoginForm = ({ onSubmit }) => {
           type="password"
           name="password"
           className={style.input}
+          placeholder=" "
           required
         />
         <div className={style.cut}></div>

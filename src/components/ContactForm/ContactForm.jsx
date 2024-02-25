@@ -57,6 +57,7 @@ const ContactForm = () => {
           name="name"
           value={name}
           className={css.input}
+          placeholder=" "
           required
         />
         <div className={css.cut}></div>
@@ -72,6 +73,7 @@ const ContactForm = () => {
           name="number"
           value={number}
           className={css.input}
+          placeholder=" "
           required
         />
         <div className={css.cut}></div>

@@ -49,6 +49,7 @@ const RegistrationForm = ({ onSubmit }) => {
             onChange={handleChange}
             type="text"
             name="name"
+            placeholder=" "
             className={style.input}
             required
           />
@@ -64,6 +65,7 @@ const RegistrationForm = ({ onSubmit }) => {
             onChange={handleChange}
             type="email"
             name="email"
+            placeholder=" "
             className={style.input}
             required
           />
@@ -80,6 +82,7 @@ const RegistrationForm = ({ onSubmit }) => {
             type="password"
             name="password"
             className={style.input}
+            placeholder=" "
             required
           />
           <div className={style.cut}></div>
